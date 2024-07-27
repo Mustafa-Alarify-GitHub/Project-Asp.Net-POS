@@ -1,0 +1,13 @@
+﻿@model pos.Models.Catogry 
+@{
+    ViewData["Title"] = "Update Catogries";
+}
+
+ <div id="dev_cat">
+       <form  method="post"  asp-action="Edit">
+        <label for="">Updata Catogries</label><br>
+        <input required type="text" placeholder="Add New Catogries..." asp-for="Name"  name="Name"><br>
+        <h4 asp-validation-for='All' class="texr-danger">  </h4>
+        <button type="submit" id="btn_add_cat">Add Catogries</button>
+       </form>
+    </div>

@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Create Catogries";
+}
+
+ <div id="dev_cat">
+       <form  method="post">
+        <label for="">Add New Catogries</label><br>
+        <input required type="text" placeholder="Add New Catogries..." name="Name"><br>
+        <h4 asp-validation-for='All' class="texr-danger">  </h4>
+        <button type="submit" id="btn_add_cat">Add Catogries</button>
+       </form>
+    </div>

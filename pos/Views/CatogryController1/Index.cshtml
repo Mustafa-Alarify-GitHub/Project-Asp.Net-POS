@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Catogry>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="title_cat">
+    <h1>Catogries View</h1>
+    <a asp-action="Create" asp-controller="CatogryController1">New</a>
+</div>
+<div style="position: relative">
+        <table id="TB_Cat">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>NAME</td>
+                    <td>EVENT</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                     @foreach(var item in Model)
+        {
+         <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>
+                <a id="btn-edite" asp-action="Edit"  asp-route-Id="@item.Id">
+                    Edite
+                </a>
+                <a id="btn-delete" asp-action="Delete" asp-controller="CatogryController1" asp-route-id="@item.Id">
+                    Delete
+                </a>
+           </td>
+        </tr>
+        }
+          </tbody>
+       </table>
+        
+    </div>

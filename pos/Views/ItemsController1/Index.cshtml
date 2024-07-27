@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Items>
+@{
+    ViewData["Title"] = "Index";
+} 
+<div id="div_content_Get_All_Items">
+
+          
+        @foreach(var item in Model)
+        {
+         <a asp-action="Details" asp-controller="ItemsController1" asp-route-id="@item.Id">
+            <div class="card_items">
+                <div id="img_items">
+                    <img  alt="E" >
+                </div>
+                <div id="div_name_price">
+                    <h2>@item.Name</h2>
+                    <h2>@item.Price</h2>
+                </div>
+                </div>
+           </a>
+        }
+     </div>

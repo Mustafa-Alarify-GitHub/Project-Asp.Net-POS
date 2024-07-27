@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - pos</title>
+
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+
+</head>
+<body>
+      <div id="Drower">
+        <h2 id="drower-titel">ASP.Net</h2>
+        <hr>
+    
+        <h4 id="Titel_manger">Items Manger</h4>
+        <hr>
+        <a class="btn_Drower" asp-action="Index" asp-controller="ItemsController1">
+            <img src="img/Items.png" alt="E">
+            <h3>Get All Items</h3>
+        </a>
+        <a class="btn_Drower" asp-action="Create" asp-controller="ItemsController1">
+            <img src='img/add.png'alt="E">
+            <h3>Add New Item</h3>
+        </a>
+    
+        <h4 id="Titel_manger">Catogry Manger</h4>
+        <hr>
+        <a class="btn_Drower" asp-controller="CatogryController1" asp-action="Index">
+            <img src='img/cat.png' alt="E">
+            <h3> Get All Catogries</h3>
+        </a>
+       
+        <br>
+    
+    
+        <h4 id="Titel_manger">Users Manger</h4>
+        <hr>
+        <a class="btn_Drower" >
+            <img src='img/users.png' alt="E" ti>
+            <h3>Users</h3>
+        </a>
+    
+        <br>
+        <br>
+        <br>
+        <a id="btn_Drower_logout">
+            <img src='img/lo.png' alt="E" ti>
+            <h3>Log Out</h3>
+        </a>
+        <script src='js/jsadmin/Button_Drower.js'></script>
+    </div>
+    <div id="body">
+        <div id="Nav">
+            <h1>Dashborad</h1>
+            <h1>Mustafa</h1>
+        </div>
+        <div id="Content">
+            @RenderBody()
+        </div>
+    </div>
+    <a asp-controller="CatogryController1" asp-action="index">HHHH</a>
+        
+ 
+</body>
+</html>

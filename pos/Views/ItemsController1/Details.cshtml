@@ -1,0 +1,39 @@
+﻿ @model pos.Models.Items
+
+<div id="show_item">
+        <div id="img_show_item">
+            <img width="300px"  >
+        </div>
+        <div id="propties_show_item">
+            <h1  id="show_title">Name Item : </h1>
+            
+            <input id="show_data" type="text" asp-for="Name" disabled></input>
+
+            <div id="div_show_price_cat">
+
+             <div>
+                <h1 id="show_titleD">Price</h1>
+                <input id="show_data" type="text" asp-for="Price" disabled></input>
+             </div>
+                @*<div>
+                    <h1 id="show_titleD">Catogries</h1>
+                <h1 id="show_dataD">{{$cat->cat_name}}</h1>
+                </div>*@
+            </div>
+
+            <h1 id="show_title">Description</h1>
+            <div id="show_dataP">
+                <input id="show_data" type="text" asp-for="Des" disabled></input>
+            </div>
+
+            <div>
+                <h1 id="show_titleD">Count Item</h1>
+               <input id="show_data" type="text" asp-for="Count" disabled></input>
+             </div>
+
+            <div id="div_btn_show">
+                <a id="btn_show_U" asp-action="Edit" asp-controller="ItemsController1" asp-route-id="1">Updata</a>
+                <a asp-action="Delete" asp-controller="ItemsController1" asp-route-id="1" id="btn_show_D">Delete</a>
+            </div>
+        </div>
+    </div>

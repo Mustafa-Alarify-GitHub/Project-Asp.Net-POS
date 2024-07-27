@@ -1,0 +1,34 @@
+﻿@model pos.Models.Items 
+
+  <div >
+        <form  id="div_add_item"  method="post">
+      
+           
+            <div id="form_add_itemR"> 
+                
+              <center>
+         <div id="form_add_itemL">
+                <label id="label_add_item" for="">Name Item</label>
+                <input id="input_add_item" asp-for="Name" type="text" name="name" placeholder="Name Item" >
+                <label id="label_add_item" for="">price Item</label>
+                <input id="input_add_item" asp-for="Price" type="number" name="price" placeholder="price item" >
+                <label id="label_add_item" for="">Descrpiton</label> 
+                <textarea id="input_add_item" name="Des" cols="10" rows="3" ></textarea> 
+                <label id="label_add_item" for="">Count Item</label>
+                <input id="input_add_item" type="number" name="Count" placeholder="price item" >
+            </div>
+               
+              </center>
+           @*   <input type="file" id="file" name="img" > 
+                <label for="file">
+                    <div id="add_img_item">
+                        <img alt="s" id="img_new_item" width="170px">
+                        <p id="p">Click Here for Updata Iamge </p>
+                    </div>
+                </label>*@
+            
+            </div>
+            
+            <button id="btn_add_item" type="submit">Updata</button>
+        </form>
+    </div>
