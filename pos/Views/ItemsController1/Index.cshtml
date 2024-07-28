@@ -10,13 +10,19 @@
          <a asp-action="Details" asp-controller="ItemsController1" asp-route-id="@item.Id">
             <div class="card_items">
                 <div id="img_items">
-                    <img  alt="E" >
+                    
+                    <img  alt="E" src="~/Image/@item.Img" >
                 </div>
                 <div id="div_name_price">
                     <h2>@item.Name</h2>
                     <h2>@item.Price</h2>
                 </div>
+                <div id="div_btn_show">
+                <a id="btn_show_U" asp-action="Edit" asp-controller="ItemsController1" asp-route-id="@item.Id">Updata</a>
+                <a asp-action="Delete" asp-controller="ItemsController1" asp-route-id="@item.Id" id="btn_show_D">Delete</a>
+            </div>
                 </div>
+
            </a>
         }
      </div>

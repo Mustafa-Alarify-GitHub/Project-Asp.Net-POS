@@ -1,7 +1,7 @@
 ﻿@model pos.Models.Items 
 
   <div >
-        <form  id="div_add_item"  method="post">
+        <form  id="div_add_item"  method="post" asp-action="Edit" asp-controller="ItemsController1">
       
            
             <div id="form_add_itemR"> 
@@ -13,9 +13,9 @@
                 <label id="label_add_item" for="">price Item</label>
                 <input id="input_add_item" asp-for="Price" type="number" name="price" placeholder="price item" >
                 <label id="label_add_item" for="">Descrpiton</label> 
-                <textarea id="input_add_item" name="Des" cols="10" rows="3" ></textarea> 
+                <textarea id="input_add_item" name="Des" asp-for="Des" cols="10" rows="3" ></textarea> 
                 <label id="label_add_item" for="">Count Item</label>
-                <input id="input_add_item" type="number" name="Count" placeholder="price item" >
+                <input id="input_add_item" type="number" asp-for="Count" name="Count" placeholder="price item" >
             </div>
                
               </center>

@@ -8,10 +8,14 @@ namespace pos.Controllers
     public class ItemsController1 : Controller
     {
         private readonly AppDbContext _db;
-        public ItemsController1(AppDbContext db)
+        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _host;
+
+        public ItemsController1(AppDbContext db, Microsoft.AspNetCore.Hosting.IHostingEnvironment host)
         {
             _db = db;
+            _host = host;
         }
+
         // GET: ItemsController1
         public ActionResult Index()
         {
@@ -34,7 +38,8 @@ namespace pos.Controllers
         // GET: ItemsController1/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<Catogry> data = _db.Catogries.ToList();
+            return View(data);
         }
 
         // POST: ItemsController1/Create
@@ -44,6 +49,13 @@ namespace pos.Controllers
         {
             if (ModelState.IsValid)
             {
+                string imgUpload = Path.Combine(_host.WebRootPath, "Image");
+                string imgPath = items.formFile.FileName;
+
+                string fulPath =Path.Combine(imgUpload, imgPath);
+                items.formFile.CopyTo(new FileStream(fulPath,FileMode.Create));
+                items.Img = imgPath;
+
                 _db.Items.Add(items);
                 _db.SaveChanges();
                 return Redirect("Index");
@@ -71,8 +83,14 @@ namespace pos.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, Items item)
         {
-            if (ModelState.IsValid)
+            //if (ModelState.IsValid)
+
+            if (id == item.Id)
+
             {
+                //var i = _db.Items.Find(id);
+
+                //item.Img = i.Img;
                 _db.Items.Update(item);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
@@ -85,8 +103,9 @@ namespace pos.Controllers
         }
 
         // GET: ItemsController1/Delete/5
-        public ActionResult Delete(int id,Items item)
+        public ActionResult Delete(int id)
         {
+            var item = _db.Items.Find(id);
             _db.Items.Remove(item);
             _db.SaveChanges();
             return RedirectToAction("Index");

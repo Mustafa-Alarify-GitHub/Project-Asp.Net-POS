@@ -74,8 +74,10 @@ namespace pos.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, Catogry catogry)
         {
-            if (ModelState.IsValid)
-            {
+           
+            //if (ModelState.IsValid)
+            if (id == catogry.Id)
+                {
                 _db.Catogries.Update(catogry);
                 _db.SaveChanges();
                 return RedirectToAction("Index");

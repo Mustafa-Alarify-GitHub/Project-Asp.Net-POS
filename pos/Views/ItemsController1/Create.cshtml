@@ -1,6 +1,11 @@
-﻿ <div >
+﻿@model IEnumerable<Catogry>
+
+ <div >
         <form  id="div_add_item" method="post" enctype="multipart/form-data">
             <div id="form_add_itemL">
+
+             <input type="file" id="file" style="display:none" name="formFile"  required onchange="loadImg(event)"> 
+
                 <label id="label_add_item" for="">Name Item</label>
                 <input id="input_add_item" type="text" name="Name" placeholder="Name Item" required>
                 <label id="label_add_item" for="">price Item</label>
@@ -14,19 +19,39 @@
             <div id="form_add_itemR"> 
 
 
-                
+                 <center>
+                <label id="label_add_item">Catogries</label>
+                <select name="cat_id" id="select_add_item">
+                        @foreach(var data in Model)
+        {
+                                <option value="@data.Id">@data.Name</option>
+
+        }
+                </select>
+              </center>
                <label id="label_add_item" for="">Descrpiton</label> 
-                <textarea id="input_add_item" name="Des" cols="30" rows="2" required></textarea> 
-             @* <input type="file" id="file" style="display:none" name="img" required> 
+                <textarea id="input_add_item" name="Des" cols="30" rows="2" required></textarea>
+                
                 <label for="file">
                     <div id="add_img_item">
-                        <img src="~/img~/img/add-img.png" id="img_new_item" alt="" width="80px">
+                        <img src="" id="img_new_item" alt="" width="80px">
                         <p id="p">Click Here for Add Iamge </p>
                     </div>
-                </label>*@
+                </label>
             
             </div>
             
            
         </form>
+        <script>
+            var loadImg = function(event){
+
+            var reader = new FileReader();
+
+            reader.onload = function(){
+             document.getElementById("img_new_item").src =reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+            }
+        </script>
     </div>

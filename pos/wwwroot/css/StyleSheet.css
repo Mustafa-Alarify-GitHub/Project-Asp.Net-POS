@@ -440,17 +440,13 @@ hr {
 }
 
 #div_btn_show {
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin: auto;
+ 
 }
 
 #btn_show_U {
-    font-size: 23px;
+    font-size: 15px;
     background-color: rgb(8, 118, 213);
-    padding: 5px 50px;
+    padding: 5px 25px;
     font-weight: 900;
     color: #fff;
     border-radius: 20px;

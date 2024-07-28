@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K8sSTGlWvV0NmLJTNm0/iMtfHizv1QbK8S2SjI2MGpc=",
+  "Hash": "///+GA5a/BA78EnnwMGBvE+oLc4A902Z7CTI8eSxIsY=",
   "Source": "pos",
   "BasePath": "_content/pos",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Mustafa\\source\\repos\\pos\\pos\\wwwroot\\Image\\Screenshot_٢٠٢٤٠٧٢٧-١٢٥٣٢١_MX Player.jpg",
+      "SourceId": "pos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mustafa\\source\\repos\\pos\\pos\\wwwroot\\",
+      "BasePath": "_content/pos",
+      "RelativePath": "Image/Screenshot_٢٠٢٤٠٧٢٧-١٢٥٣٢١_MX Player.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Screenshot_٢٠٢٤٠٧٢٧-١٢٥٣٢١_MX Player.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Mustafa\\source\\repos\\pos\\pos\\wwwroot\\Image\\tempFileForShare_٢٠٢٤٠٧٢٧-١٢٥٧٢٦.jpg",
+      "SourceId": "pos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mustafa\\source\\repos\\pos\\pos\\wwwroot\\",
+      "BasePath": "_content/pos",
+      "RelativePath": "Image/tempFileForShare_٢٠٢٤٠٧٢٧-١٢٥٧٢٦.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\tempFileForShare_٢٠٢٤٠٧٢٧-١٢٥٧٢٦.jpg"
     },
     {
       "Identity": "C:\\Users\\Mustafa\\source\\repos\\pos\\pos\\wwwroot\\img\\add.png",
