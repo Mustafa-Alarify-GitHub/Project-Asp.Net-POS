@@ -1,0 +1,32 @@
+﻿@model IEnumerable<User>
+
+    <div style="position: relative">
+    <table id="TB_Cat">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>EMAIL</td>
+                <td>EVENT</td>
+            </tr>
+        </thead>
+        <tbody>
+               @foreach(var item in Model)
+        {
+        <tr class="row_cat">
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td style="display:flex;justify-content:center;padding:5px;">
+                <a asp-action="Delete" asp-route-Id="@item.Id" asp-controller="UserController1" style="border: none;background-color: transparent;display: inline-block;">
+                    <img src='~/img/del.png' alt="" style="margin-right: 15px">
+                </a>
+                <a><img src='~/img/edi.png' alt=""></a>
+            </td>
+            </tr>
+        }
+               
+            </tbody>
+    </table>
+    
+</div>

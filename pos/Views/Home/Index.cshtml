@@ -1,7 +1,77 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+
+<div id="continer_r">
+                <div class="continer_content_1">
+                    <h4 id="title_content_r"> Count Items</h4>
+                    <hr>
+                    <h1 id="count_content_r">@Model[1]</h1>
+                </div>
+
+                <div class="continer_content_3">
+                    <h4 id="title_content_r">Count Catogries</h4>
+                    <hr>
+                    <h1 id="count_content_r">@Model[2]</h1>
+                </div>
+                <div class="continer_content_2">
+                    <h4 id="title_content_r">Count Users</h4>
+                    <hr>
+                    <h1 id="count_content_r">@Model[0]</h1>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <style>
+                #continer_r{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    direction:ltr;
 }
 
-<div class="text-center">
-    <h1 class=""> jkkjhjkh</h1>
-</div>
+#title_content_r{
+    margin: 10px 10px 0 0;
+    font-size: 22px;
+    color: #fff;
+}
+#count_content_r{
+    margin:0 10px;
+    font-size: 80px;
+    color: #fff;
+}
+
+.continer_content_1{
+    width: 25%;
+    height: 80%;
+    background-image: linear-gradient(to left ,#1a9ae4,#1a9ae49c);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;      padding:10px
+ 
+}
+.continer_content_2{
+    width: 25%;
+    height: 80%;
+    background-image: linear-gradient(to left ,#f02424,#f0242494);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;    padding:10px
+
+}
+.continer_content_3{
+    width: 25%;
+    height: 80%;
+    background-image: linear-gradient(to left ,#03a806,#03c206a1);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding:10px
+}
+            </style>

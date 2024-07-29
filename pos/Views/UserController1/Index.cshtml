@@ -1,10 +1,163 @@
-﻿@*
-
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model pos.Models.User
 @{
-    //Layout = null;
+    Layout = null;
+}  <div id="mainLogin">
+        <img id="imgLoginUp" src="~/img/up.png" alt="" />
+        <img id="imgLoginDown" src="~/img/under.png" alt="sd" />
+
+        <div id="centerLogin">
+          <div id="imgLoginCenter">
+            <img src="~/img/Logins.png" alt="" />
+          </div>
+          <div id="formLogin">
+            <center>
+              <h1>Login</h1>
+              <p>Wellcome back make sure to register your email and password</p>
+              <form  method="post" asp-action="Login" asp-controller="UserController1">
+                <input
+                  class="inputLogin"
+                  type="text"
+                  placeholder="E-mail"
+                  name="Email"
+                />
+                <span asp-validation-for="Email" style="color:red;"> </span>
+                <input
+                  class="inputLogin"
+                  type="password"
+                  placeholder="Password"
+                  name="Password"
+                />
+                <span asp-validation-for="Password" style="color:red;"> </span>
+                <br/>
+                <button id="btn_login" type="submit">
+                  Login
+                </button>
+              </form>
+              <a id="btn_sign_login" asp-action="Create" asp-controller="UserController1">
+                  I don`t Have Account <span id="click_s">Click Here</span>
+                </a>
+            </center>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+#mainLogin {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  transition: .5s;
+}
+#imgLoginUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#imgLoginDown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#centerLogin {
+  background-color: #fff;
+  width: 70%;
+  margin: auto;
+  height: 80vh;
+  z-index: 5;
+  border-top-right-radius:60px ;
+  border-bottom-left-radius:60px ;
+  box-shadow: 0 0 30px #5d97d0;
 }
 
+#imgLoginCenter {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
 
-<h1>ihiuuiuihi</h1>
+#formLogin {
+    width: 50%;
+    height: 100%;
+
+    float: right;
+}
+#imgLoginCenter img {
+  width: 420px;
+}
+#formLogin h1{
+    width: 100%;
+    color: #265583;
+    font-size: 70px;
+    margin: 20px 0;
+}
+#formLogin p{
+    width: 80%;
+    color: #265583;
+    font-size: 20px;
+    margin: 30px 0;
+}#btn_sign_login{
+    color: #265583;
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    margin: 10px 0;
+    transition: .1s;
+    font-weight: 500;
+    font-weight: 500;
+}#btn_sign_login:hover{
+    color: #0e253b;
+    cursor: pointer;
+}
+.inputLogin{
+    display: block;
+    width: 80%;
+    height: 35px;
+    margin: 22px 0;
+    border-radius: 20px;
+    border: #5d97d0 1px solid;
+    background-color: #afceec;
+    padding: 0 20px;  
+    font-size: 15px;
+}#btn_login{
+    margin: 15px;
+    width: 50%;
+    padding: 7px;
+    background-color: #3576b7;
+    border-radius: 20px;
+    font-size: 18px;
+    border: 2px solid #3576b7 ;
+    color: #fff;
+    font-weight: 700;
+    transition: .3s;
+}
+#btn_login:hover{
+    background-color: #fff;
+    color: #3576b7;
+    cursor: pointer;
+    border: 2px solid #3576b7 ;
+}
+#click_s{
+    color: #4931d0;
+    font-weight: 800;
+    transition: .5s;
+    text-decoration: underline;
+
+}#click_s:hover{
+    font-size: 20px;
+}
+</style>

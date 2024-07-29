@@ -16,7 +16,7 @@
 </head>
 <body>
       <div id="Drower">
-        <h2 id="drower-titel">ASP.Net</h2>
+        <a id="drower-titel">ASP.Net</a>
         <hr>
     
         <h4 id="Titel_manger">Items Manger</h4>
@@ -42,7 +42,7 @@
     
         <h4 id="Titel_manger">Users Manger</h4>
         <hr>
-        <a class="btn_Drower" >
+        <a class="btn_Drower" asp-action="Get_All_Users" asp-controller="UserController1">
             <img src='img/users.png' alt="E" ti>
             <h3>Users</h3>
         </a>
@@ -50,7 +50,7 @@
         <br>
         <br>
         <br>
-        <a id="btn_Drower_logout">
+        <a id="btn_Drower_logout" asp-action="Index" asp-controller="UserController1">
             <img src='img/lo.png' alt="E" ti>
             <h3>Log Out</h3>
         </a>

@@ -46,11 +46,14 @@
 }
 
 #drower-titel {
+    display:flex;
     width: 100%;
     text-align: center;
     color: #fff;
     font-size: 40px;
     margin: 10px 0;
+    align-items:center;
+    cursor:pointer;
 }
 
 hr {
@@ -444,7 +447,7 @@ hr {
 }
 
 #btn_show_U {
-    font-size: 15px;
+    font-size: 18px;
     background-color: rgb(8, 118, 213);
     padding: 5px 25px;
     font-weight: 900;

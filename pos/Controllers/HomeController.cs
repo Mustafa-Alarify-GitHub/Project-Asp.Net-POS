@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using pos.Data;
 using pos.Models;
 using System.Diagnostics;
 
@@ -6,16 +7,21 @@ namespace pos.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly AppDbContext _db;
+        public HomeController(AppDbContext db)
         {
-            _logger = logger;
+            _db = db;
         }
+     
+
 
         public IActionResult Index()
         {
-            return View();
+            int userCount = _db.Users.Count();
+            int ItemsCount = _db.Items.Count();
+            int catCount = _db.Catogries.Count();
+            int[] count=new int[3] { userCount,ItemsCount,catCount};
+            return View(count);
         }
 
         public IActionResult Privacy()
